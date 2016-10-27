@@ -10,7 +10,6 @@
         <a href="<%= root_url(sort: 'alphabetical') %>" class="list-group-item">Sort by Alphabetical</a>
       </div>
     </div>
-
     <div class="col-md-9">
       <div class="row carousel-holder">
         <div class="col-md-12">
@@ -23,7 +22,7 @@
             <div class="carousel-inner">
               <% @products.each_with_index do |product, index| %>
                 <div class="<%= index == 0 ? 'item active' : 'item' %>">
-                  <%= image_tag product.image_path, class: 'slide-item', style: 'max-width: 800px; max-height: 300px;' %>
+             <%= image_tag product.image_path, class: 'slide-item', style: 'max-width: 800px; max-height: 300px;' %>
                 </div>
               <% end %>
             </div>
@@ -39,7 +38,7 @@
       </div>
       <div class="row">
         <div class="col-xs-12">
-          <p class="lead"> Hello! Come check all that hats we have in our store. </h2>
+          <p class="lead"> Hello! Come check all that hats we have in our store. </p>
         </div>
       </div>
       <% @products.in_groups_of(3) do |group| %>
